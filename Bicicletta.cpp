@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "Veicolo.h"
-
+Bicicletta::Bicicletta(const std::string& nome) : Veicolo(nome, 2) {}
 void Bicicletta:: muoviti() const {
     std::cout << "La bicicletta " << nome << " avanza pedalando" << std::endl;
 }

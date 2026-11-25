@@ -15,9 +15,9 @@ void Veicolo::descrizione() const {
     std::cout << "Veicolo descrizione: "<<nome <<" "<<numeroRuote <<std::endl;
 }
 
-Veicolo::Veicolo(const std::string &nome, int numero_ruote): nome(nome), numeroRuote(numeroRuote) {
-    std::cout<<"Creato";
-}
-Veicolo:: ~Veicolo() {
+Veicolo::Veicolo(const std::string& nome, int numeroRuote)
+    : nome(nome), numeroRuote(numeroRuote) {}
+
+Veicolo::~Veicolo() {
     std::cout << "Veicolo " << nome << " distrutto" << std::endl;
 }
