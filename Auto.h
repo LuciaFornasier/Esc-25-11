@@ -4,10 +4,16 @@
 
 #ifndef UNTITLED4_AUTO_H
 #define UNTITLED4_AUTO_H
+#include "Veicolo.h"
 
 
-class Auto {
+class Auto : public Veicolo {
+public:
+    Auto(const std::string& nome,int ruote);
+    void  descrizione() const override;
+    void  muoviti() const override;
 
+    ~Auto();
 };
 
 

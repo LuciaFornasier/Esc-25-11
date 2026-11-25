@@ -1,18 +1,24 @@
 #include <iostream>
-
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "Veicolo.h"
+#include "Auto.h"
+#include "Bicicletta.h"
+#include "Treno.h"
 
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
+    Veicolo* v1 = new Auto("Panda",4);
+    Veicolo* v2 = new Bicicletta("Bianchi",4);
+    Veicolo* v3 = new Treno("Frecciarossa", 8);
 
-    const auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    v1->descrizione();
+    v1->muoviti();
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
-
+    v2->descrizione();
+    v2->muoviti();
+    v3->descrizione();
+    v3->muoviti();
+    delete v1;
+    delete v2;
+    delete v3;
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
+    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.

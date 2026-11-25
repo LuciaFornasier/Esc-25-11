@@ -4,14 +4,19 @@
 
 #ifndef UNTITLED4_VEICOLO_H
 #define UNTITLED4_VEICOLO_H
+#include <string>
 
 
 class Veicolo {
-    public:
+protected:
+    std::string nome;
+    int numeroRuote;
+public:
     virtual ~Veicolo();
-    Veicolo();
-    virtual muoviti();
-    virtual descrizione();
+    virtual void muoviti() const=0;
+    virtual void descrizione() const=0;
+
+    Veicolo(const std::string & nome, int numero_ruote);
 };
 
 
