@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #include "Personaggio.h"
 #include "Guerriero.h"
@@ -11,22 +12,20 @@ void turno(Personaggio* p) {
 }
 
 int main() {
-    Personaggio* p1 = new Guerriero("Conan");
-    Personaggio* p2 = new Mago("Merlino");
-    Personaggio* p3 = new Arciere("Legolas");
+    std::vector<Personaggio*> personaggi;
+    personaggi.push_back(new Guerriero("Conan"));
+    personaggi.push_back(new Mago("Merlino"));
+    personaggi.push_back(new Arciere("Legolas"));
+    personaggi.push_back(new Guerriero("Aragorn"));
 
-    turno(p1);
-    std::cout << std::endl;
+    for (Personaggio* p : personaggi) {
+        turno(p);
+        std::cout << std::endl;
+    }
 
-    turno(p2);
-    std::cout << std::endl;
-
-    turno(p3);
-    std::cout << std::endl;
-
-    delete p1;
-    delete p2;
-    delete p3;
+    for (Personaggio* p : personaggi) {
+        delete p;
+    }
 
     return 0;
 }
