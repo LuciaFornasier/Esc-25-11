@@ -5,6 +5,7 @@
 int main() {
     // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
 
+
     const auto lang = "C++";
     std::cout << "Hello and welcome to " << lang << "!\n";
 
